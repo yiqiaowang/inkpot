@@ -1,8 +1,3 @@
-" Vim color file
-" Name:       inkpot.vim
-" Maintainer: Ciaran McCreesh <ciaran.mccreesh@googlemail.com>
-" Homepage:   http://github.com/ciaranm/inkpot/
-"
 " This should work in the GUI, rxvt-unicode (88 colour mode) and xterm (256
 " colour mode). It won't work in 8/16 colour terminals.
 "
@@ -99,7 +94,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     hi Constant       gui=NONE   guifg=#ffcd8b   guibg=NONE
     hi String         gui=NONE   guifg=#ffcd8b   guibg=#404040
     hi Error          gui=NONE   guifg=#ffffff   guibg=#6e2e2e
-    hi Identifier     gui=NONE   guifg=#ff8bff   guibg=NONE
+    hi Identifier      gui=NONE   guifg=#ff8bff   guibg=NONE
     hi Ignore         gui=NONE
     hi Number         gui=NONE   guifg=#f0ad6d   guibg=NONE
     hi PreProc        gui=NONE   guifg=#409090   guibg=NONE
@@ -137,8 +132,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         hi SpellRare    gui=undercurl guisp=#cc66cc
         hi SpellLocal   gui=undercurl guisp=#cccc66
         hi SpellCap     gui=undercurl guisp=#66cccc
-
-        hi MatchParen   gui=NONE      guifg=#cfbfad   guibg=#4e4e8f
+        
+        hi MatchParen   gui=underline,bold guifg=none guibg=none
     endif
     if v:version >= 703
         hi Conceal      gui=NONE      guifg=#c080d0   guibg=NONE
@@ -191,7 +186,7 @@ else
     exec "hi Constant       cterm=NONE   ctermfg=" . <SID>X(73) . " ctermbg=" . "NONE"
     exec "hi String         cterm=NONE   ctermfg=" . <SID>X(73) . " ctermbg=" . <SID>X(81)
     exec "hi Error          cterm=NONE   ctermfg=" . <SID>X(79) . " ctermbg=" . <SID>X(32)
-    exec "hi Identifier     cterm=NONE   ctermfg=" . <SID>X(53) . " ctermbg=" . "NONE"
+    exec "hi Identifier      cterm=NONE   ctermfg=" . <SID>X(53) . " ctermbg=" . "NONE"
     exec "hi Ignore         cterm=NONE"
     exec "hi Number         cterm=NONE   ctermfg=" . <SID>X(69) . " ctermbg=" . "NONE"
     exec "hi PreProc        cterm=NONE   ctermfg=" . <SID>X(25) . " ctermbg=" . "NONE"
@@ -213,7 +208,7 @@ else
         exec "hi SpellRare      cterm=NONE ctermbg=" . <SID>X(33)
         exec "hi SpellLocal     cterm=NONE ctermbg=" . <SID>X(36)
         exec "hi SpellCap       cterm=NONE ctermbg=" . <SID>X(21)
-        exec "hi MatchParen     cterm=NONE ctermbg=" . <SID>X(14) . "ctermfg=" . <SID>X(25)
+        hi MatchParen     cterm=underline,bold ctermbg=none ctermfg=none
     endif
     if v:version >= 703
         exec "hi Conceal      cterm=NONE      ctermfg=" . <SID>X(55) . " ctermbg=" . "NONE"
